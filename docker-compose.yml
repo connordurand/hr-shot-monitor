@@ -1,0 +1,11 @@
+services:
+  dashboard:
+    build: .
+    volumes:
+      - /run/dbus:/run/dbus
+      - /dev/snd:/dev/snd
+      - ./logs:/app/logs
+    privileged: true
+    network_mode: host
+    environment:
+      - DBUS_SYSTEM_BUS_ADDRESS=unix:path=/run/dbus/system_bus_socket

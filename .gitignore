@@ -1,0 +1,13 @@
+logs/
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+.Rhistory
+
+# virtualenv (capstone/ is a venv)
+bin/
+lib/
+lib64
+include/
+pyvenv.cfg

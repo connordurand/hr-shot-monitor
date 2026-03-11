@@ -1,0 +1,196 @@
+/* ── Dash 4 Slider: replace default purple with USMA gold ───────────────── */
+
+/* Filled range (the gold portion left of the thumb) */
+.dash-slider-range {
+    background-color: #CFB53B !important;
+    background: #CFB53B !important;
+}
+
+/* Unfilled rail */
+.dash-slider-track {
+    background-color: #2a2a2a !important;
+    background: #2a2a2a !important;
+}
+
+/* Thumb / handle */
+.dash-slider-thumb,
+[class^="dash-slider-thumb"] {
+    background-color: #CFB53B !important;
+    background: #CFB53B !important;
+    border: 2px solid #CFB53B !important;
+    box-shadow: 0 0 0 3px rgba(207, 181, 59, 0.20) !important;
+}
+.dash-slider-thumb:hover,
+[class^="dash-slider-thumb"]:hover {
+    box-shadow: 0 0 0 6px rgba(207, 181, 59, 0.30) !important;
+    border-color: #f2e4b3 !important;
+}
+.dash-slider-thumb:focus,
+[class^="dash-slider-thumb"]:focus {
+    box-shadow: 0 0 0 6px rgba(207, 181, 59, 0.35) !important;
+    outline: none !important;
+}
+
+/* Mark dots */
+.dash-slider-dot {
+    background-color: #3a3000 !important;
+    border-color: #555 !important;
+}
+.dash-slider-dot.dash-slider-dot-outside-selection {
+    background-color: #2a2a2a !important;
+    border-color: #444 !important;
+}
+
+/* Mark labels */
+.dash-slider-mark {
+    color: #666666 !important;
+    font-size: 0.72rem !important;
+}
+
+/* Tooltip bubble */
+.dash-slider-tooltip {
+    background-color: #111111 !important;
+    color: #f2e4b3 !important;
+    border: 1px solid #CFB53B !important;
+    border-radius: 4px !important;
+    box-shadow: none !important;
+    font-size: 11px !important;
+    padding: 2px 8px !important;
+}
+
+/* ── Legacy rc-slider overrides (Dash < 4) ──────────────────────────────── */
+.rc-slider-track, .rc-slider-tracks { background-color: #CFB53B !important; }
+.rc-slider-handle {
+    background-color: #CFB53B !important;
+    border-color: #CFB53B !important;
+    opacity: 1 !important;
+}
+.rc-slider-handle-dragging {
+    border-color: #f2e4b3 !important;
+    box-shadow: 0 0 0 5px rgba(207, 181, 59, 0.25) !important;
+}
+.rc-slider-dot-active { border-color: #CFB53B !important; }
+.rc-slider-rail { background-color: #2a2a2a !important; }
+.rc-slider-mark-text { color: #666666 !important; }
+.rc-slider-mark-text-active { color: #CFB53B !important; }
+.rc-slider-tooltip-inner {
+    background-color: #111111 !important;
+    color: #f2e4b3 !important;
+    border: 1px solid #CFB53B !important;
+    box-shadow: none !important;
+    font-size: 12px !important;
+}
+.rc-slider-tooltip-arrow { border-top-color: #CFB53B !important; }
+
+/* ── Dropdown: replace blue focus ring with gold ───────────────────────── */
+.Select-control:hover,
+.is-focused .Select-control,
+.is-open .Select-control {
+    border-color: #CFB53B !important;
+    box-shadow: 0 0 0 1px #CFB53B !important;
+}
+.VirtualizedSelectFocusedOption,
+.Select-option.is-focused {
+    background-color: #2a2a2a !important;
+    color: #f2e4b3 !important;
+}
+.Select-option.is-selected {
+    background-color: #3a3000 !important;
+    color: #CFB53B !important;
+}
+
+/* ── Checkboxes: gold accent ───────────────────────────────────────────── */
+input[type="checkbox"] {
+    accent-color: #CFB53B;
+    width: 14px;
+    height: 14px;
+}
+
+/* ── Loading spinner: gold ─────────────────────────────────────────────── */
+._dash-loading {
+    color: #CFB53B !important;
+}
+
+/* ── Card shadows ──────────────────────────────────────────────────────── */
+[id^="slot-card-"] {
+    box-shadow: 0 6px 28px rgba(0, 0, 0, 0.7);
+    transition: box-shadow 0.2s ease;
+}
+[id^="slot-card-"]:hover {
+    box-shadow: 0 8px 36px rgba(0, 0, 0, 0.85);
+}
+
+/* ── Button transitions ────────────────────────────────────────────────── */
+button {
+    transition: filter 0.12s ease, transform 0.08s ease, box-shadow 0.2s ease !important;
+}
+button:hover {
+    filter: brightness(1.15) !important;
+}
+button:active {
+    transform: scale(0.96) !important;
+}
+
+/* ── HIT / MISS button glow on hover ─────────────────────────────────── */
+[id^="hit-btn-"]:hover {
+    box-shadow: 0 0 24px rgba(44, 160, 44, 0.45) !important;
+}
+[id^="miss-btn-"]:hover {
+    box-shadow: 0 0 24px rgba(204, 34, 34, 0.45) !important;
+}
+
+/* ── Step indicator ──────────────────────────────────────────────────── */
+.step-pending {
+    background-color: transparent;
+    border: 2px solid #444;
+    color: #444;
+}
+.step-active {
+    background-color: transparent;
+    border: 2px solid #CFB53B;
+    color: #CFB53B;
+    box-shadow: 0 0 8px rgba(207, 181, 59, 0.3);
+}
+.step-complete {
+    background-color: #CFB53B;
+    border: 2px solid #CFB53B;
+    color: #000;
+}
+
+/* ── Pulsing mic indicator ───────────────────────────────────────────── */
+@keyframes pulse-green {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+}
+.mic-live {
+    animation: pulse-green 1.5s ease-in-out infinite;
+}
+
+/* ── Recording pulse indicator ───────────────────────────────────────── */
+@keyframes pulse-red {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.2; }
+}
+[id^="recording-indicator-"] {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ff4136;
+    animation: pulse-red 1s ease-in-out infinite;
+}
+
+/* ── Tabs ─────────────────────────────────────────────────────────────── */
+.tab-container {
+    background-color: #0d0d0d !important;
+}
+
+/* ── DataTable overrides ─────────────────────────────────────────────── */
+.dash-spreadsheet-container .dash-spreadsheet-inner td,
+.dash-spreadsheet-container .dash-spreadsheet-inner th {
+    font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+/* ── Metrics tile alternating background ─────────────────────────────── */
+[id^="summary-"] > div > div:nth-child(even) {
+    background-color: #0e0e0e !important;
+}
